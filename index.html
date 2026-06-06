@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Grupo Casas Bahia | Eletrodomésticos e Inovação</title>
+    
+    <!-- Bootstrap 5 + ícones + CSS custom -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts para refinamento -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f8f9fc;
+            scroll-behavior: smooth;
+        }
+        .navbar-brand img {
+            max-height: 42px;
+        }
+        .bg-custom-primary {
+            background-color: #003f6f; /* tom inspirado na marca Casas Bahia */
+        }
+        .bg-custom-secondary {
+            background-color: #ffb81c;
+        }
+        .btn-custom-yellow {
+            background-color: #ffb81c;
+            color: #00264d;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-custom-yellow:hover {
+            background-color: #e6a617;
+            color: #001f3f;
+            transform: scale(1.02);
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #00264d 0%, #004b8f 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .card-eletro {
+            border: none;
+            border-radius: 1.2rem;
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .card-eletro:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+        .card-eletro img {
+            height: 200px;
+            object-fit: cover;
+            background-color: #f3f5f8;
+        }
+        .info-box {
+            background: white;
+            border-radius: 20px;
+            transition: 0.2s;
+        }
+        .footer-link {
+            text-decoration: none;
+            color: #ffb81c;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        .social-icon {
+            font-size: 1.6rem;
+            margin-right: 1rem;
+            color: #ffb81c;
+            transition: 0.2s;
+        }
+        .social-icon:hover {
+            color: white;
+        }
+        .badge-cnpj {
+            background-color: #eef2ff;
+            color: #003f6f;
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+        .table-dados th {
+            background-color: #e9ecef;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center;
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-custom-primary shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#">
+            <i class="bi bi-shop fs-3 align-middle me-1"></i> 
+            <span class="fw-bold">Grupo Casas Bahia</span>
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#home"><i class="bi bi-house-door"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#produtos"><i class="bi bi-tv"></i> Produtos</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#sobre"><i class="bi bi-building"></i> Sobre</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#contato"><i class="bi bi-envelope-paper"></i> Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <h1 class="display-4 fw-bold mb-3">Eletrodomésticos que transformam sua casa</h1>
+                <p class="lead mb-4">Qualidade, inovação e os melhores preços você encontra aqui. Grupo Casas Bahia, referência no varejo brasileiro com mais de 17 anos de história.</p>
+                <a href="#produtos" class="btn btn-custom-yellow btn-lg px-4 py-2 rounded-pill"><i class="bi bi-cart-check"></i> Ver ofertas</a>
+            </div>
+            <div class="col-lg-5 text-center">
+                <img src="https://placehold.co/600x400?text=Eletrodomésticos+Premium" alt="eletrodomésticos" class="img-fluid rounded-4 shadow-lg" style="max-height: 300px; width: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PRODUTOS EM DESTAQUE ================= -->
+<section id="produtos" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #003f6f;"><i class="bi bi-stars"></i> Produtos em Destaque</h2>
+            <p class="text-muted">As melhores marcas e tecnologia para o seu lar</p>
+        </div>
+        <div class="row g-4">
+            <!-- Card 1 - Geladeira -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-eletro h-100">
+                    <img src="https://placehold.co/400x300?text=Geladeira+Inverter" class="card-img-top" alt="Geladeira">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Refrigerador Frost Free</h5>
+                        <p class="card-text text-muted">Capacidade 443L, painel digital, economia A+.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-success">R$ 2.899</span>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <button class="btn btn-outline-primary mt-2 w-100 rounded-pill"><i class="bi bi-bag-plus"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 - Máquina Lavar -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-eletro h-100">
+                    <img src="https://placehold.co/400x300?text=Lavadora+12kg" class="card-img-top" alt="Máquina de lavar">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Lavadora Automática 12kg</h5>
+                        <p class="card-text text-muted">Economia de água, ciclos rápidos e silenciosa.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-success">R$ 2.199</span>
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <button class="btn btn-outline-primary mt-2 w-100 rounded-pill"><i class="bi bi-bag-plus"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 - Microondas -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-eletro h-100">
+                    <img src="https://placehold.co/400x300?text=Forno+Micro-ondas" alt="Microondas">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Micro-ondas 32L</h5>
+                        <p class="card-text text-muted">Painel eletrônico, 10 potências, descongelamento.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-success">R$ 589</span>
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <button class="btn btn-outline-primary mt-2 w-100 rounded-pill"><i class="bi bi-bag-plus"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 - Ar Condicionado -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-eletro h-100">
+                    <img src="https://placehold.co/400x300?text=Ar+Condicionado+Split" alt="Ar Condicionado">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Ar Condicionado Split 12.000 BTUs</h5>
+                        <p class="card-text text-muted">Inverter, Wi-Fi, energia eficiente.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 fw-bold text-success">R$ 2.199</span>
+                            <i class="bi bi-wifi"></i>
+                        </div>
+                        <button class="btn btn-outline-primary mt-2 w-100 rounded-pill"><i class="bi bi-bag-plus"></i> Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <i class="bi bi-arrow-repeat"></i> Confira mais de 500 produtos em nossas lojas físicas e online
+        </div>
+    </div>
+</section>
+
+<!-- ================= INFO FRASES + DIFERENCIAIS ================= -->
+<section class="py-4 bg-white">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="p-3 info-box">
+                    <i class="bi bi-shield-check fs-1 text-primary"></i>
+                    <h5 class="mt-2">Garantia Estendida</h5>
+                    <p>Proteção total para seus eletrodomésticos, até 5 anos.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 info-box">
+                    <i class="bi bi-truck fs-1 text-primary"></i>
+                    <h5 class="mt-2">Entrega Rápida</h5>
+                    <p>Enviamos para todo o Brasil com segurança e agilidade.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 info-box">
+                    <i class="bi bi-cash-stack fs-1 text-primary"></i>
+                    <h5 class="mt-2">Melhor Preço</h5>
+                    <p>Parcele em até 12x sem juros em toda linha branca.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SOBRE A EMPRESA + DADOS OFICIAIS ================= -->
+<section id="sobre" class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold" style="color: #003f6f;"><i class="bi bi-building"></i> Sobre o Grupo Casas Bahia S.A.</h2>
+                <p class="mt-3">Fundada em <strong>07 de agosto de 2008</strong>, somos uma sociedade anônima aberta com capital social superior a <strong>R$ 7 bilhões</strong>. Atuamos no comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo (CNAE 47.53-9-00), sendo referência nacional em qualidade e credibilidade.</p>
+                <p>Com sede na <strong>Avenida Das Nações Unidas, 12995</strong> – Brooklin Paulista, São Paulo – SP, mantemos operações em diversos estados brasileiros, sempre com foco no cliente e na inovação. Nosso quadro diretivo reúne lideranças experientes que guiam a empresa em crescimento contínuo.</p>
+                <div class="alert alert-warning bg-white border-warning mt-3">
+                    <i class="bi bi-info-circle-fill text-warning"></i> <strong>Situação Cadastral:</strong> <span class="badge bg-success">ATIVA</span> — desde 07/08/2008.
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-custom-primary text-white fw-bold"><i class="bi bi-database"></i> Dados Registrais</div>
+                    <div class="card-body p-0">
+                        <table class="table table-bordered table-dados mb-0 small">
+                            <tbody>
+                                <tr><th style="width: 40%;">CNPJ</th><td>33.041.260/0652-90 <span class="badge-cnpj ms-2">33041260065290</span></td></tr>
+                                <tr><th>Inscrição Estadual (SP)</th><td>133.091.229.115</td></tr>
+                                <tr><th>Inscrição Estadual (PE)</th><td>0984343-49</td></tr>
+                                <tr><th>Razão Social</th><td>Grupo Casas Bahia S.a.</td></tr>
+                                <tr><th>Data Abertura</th><td>07/08/2008 (17 anos, 9 meses e 30 dias)</td></tr>
+                                <tr><th>Capital Social</th><td class="fw-bold text-success">R$ 7.098.241.572,51</td></tr>
+                                <tr><th>Natureza Jurídica</th><td>Sociedade Anônima Aberta</td></tr>
+                                <tr><th>Porte</th><td>Sem Enquadramento</td></tr>
+                                <tr><th>Opção pelo MEI/Simples</th><td>Não</td></tr>
+                                <tr><th>Tipo</th><td>Matriz (Ativa)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h5><i class="bi bi-person-badge"></i> Diretores / Administradores</h5>
+                    <div class="row row-cols-2 g-2 mt-1">
+                        <div class="col"><div class="border rounded p-2"><i class="bi bi-person-check"></i> Andreia Fernandes Nunes</div></div>
+                        <div class="col"><div class="border rounded p-2"><i class="bi bi-person-check"></i> Elcio Mitsuhiro Ito</div></div>
+                        <div class="col"><div class="border rounded p-2"><i class="bi bi-person-check"></i> Fabio Eduardo de Pieri Spina</div></div>
+                        <div class="col"><div class="border rounded p-2"><i class="bi bi-person-check"></i> Frederic Paul Bernard Gauthier</div></div>
+                        <div class="col"><div class="border rounded p-2"><i class="bi bi-person-check"></i> Renato Horta Franklin</div></div>
+                    </div>
+                    <p class="mt-2 text-muted small">Qualificação do responsável: Diretor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO E MAPA ESTILIZADO ================= -->
+<section id="localizacao" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <h3 class="fw-bold"><i class="bi bi-geo-alt-fill text-danger"></i> Matriz - São Paulo</h3>
+                    <address class="mt-3">
+                        <strong>Logradouro:</strong> Avenida Das Nacoes Unidas, 12995<br>
+                        <strong>Complemento:</strong> Andar 2 a 5, Bloco I - Rua Florida, 1970<br>
+                        <strong>Bairro:</strong> Brooklin Paulista<br>
+                        <strong>CEP:</strong> 04578-911<br>
+                        <strong>Município/UF:</strong> São Paulo - SP<br>
+                    </address>
+                    <hr>
+                    <p><i class="bi bi-envelope-at"></i> <strong>Correspondência:</strong><br>
+                    Grupo Casas Bahia S.a.<br>
+                    Avenida Das Nacoes Unidas 12995, Andar 2 a 5, Bloco I- Rua Florida-1970<br>
+                    Brooklin Paulista, São Paulo - SP, 04578-911</p>
+                    <div class="mt-3">
+                        <i class="bi bi-telephone-plus"></i> <strong>Telefones:</strong> (11) 1111-1111 / (11) 4225-6431
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <h3 class="fw-bold"><i class="bi bi-globe2"></i> Presença Nacional</h3>
+                    <p>Além de São Paulo, atuamos com força no estado de Pernambuco (IE 0984343-49) e demais regiões. Compromisso com o desenvolvimento e varejo justo.</p>
+                    <div class="ratio ratio-16x9 mt-3">
+                        <!-- Mapa estático customizado com embed do Google Maps (localização aproximada da Av. Nações Unidas) -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.501967696056!2d-46.70037888440855!3d-23.592626868384607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5744e2e4a4c1%3A0x5e7d6c3f6a7e5c8a!2sAv.%20das%20Na%C3%A7%C3%B5es%20Unidas%2C%2012995%20-%20Brooklin%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004578-911!5e0!3m2!1spt-BR!2sbr!4v1711284567890!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTATO + FRASES E INFORMAÇÕES ADICIONAIS ================= -->
+<section id="contato" class="py-5 bg-white">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <h2 class="fw-bold" style="color: #003f6f;"><i class="bi bi-headset"></i> Fale Conosco</h2>
+                <p class="mt-2">Atendimento dedicado para lojistas, clientes e parceiros. Nossa central está disponível de segunda a sexta, das 8h às 20h.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="bi bi-envelope fs-5 me-2 text-primary"></i> <strong>E-mail fiscal:</strong> <a href="mailto:setorfiscal.csc@viavarejo.com.br">setorfiscal.csc@viavarejo.com.br</a></li>
+                    <li class="mb-3"><i class="bi bi-telephone-forward fs-5 me-2 text-success"></i> <strong>Telefones:</strong> (11) 1111-1111 (Matriz) | (11) 4225-6431</li>
+                    <li class="mb-3"><i class="bi bi-clock-history fs-5 me-2 text-warning"></i> <strong>Horário de funcionamento:</strong> Lojas: 9h às 22h (seg-sáb) e 10h às 20h (domingo)</li>
+                </ul>
+                <div class="alert alert-secondary mt-3">
+                    <i class="bi bi-megaphone"></i> <strong>Frases Casas Bahia:</strong> “Dedicada a você, apaixonada pelo Brasil.” | “Tradição e confiança que movem lares.”
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card shadow border-0 rounded-4">
+                    <div class="card-body p-4">
+                        <h4><i class="bi bi-chat-dots"></i> Envie sua mensagem</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nome completo</label>
+                                    <input type="text" class="form-control" placeholder="Seu nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="exemplo@email.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Assunto</label>
+                                    <input type="text" class="form-control" placeholder="Dúvida sobre produto/serviço">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Mensagem</label>
+                                    <textarea rows="3" class="form-control" placeholder="Escreva sua mensagem..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-custom-yellow px-4 rounded-pill"><i class="bi bi-send"></i> Enviar mensagem</button>
+                                    <small class="ms-2 text-muted">Resposta em até 24h úteis.</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER COMPLETO ================= -->
+<footer class="bg-custom-primary text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5><i class="bi bi-shop"></i> Grupo Casas Bahia</h5>
+                <p class="small">CNPJ: 33.041.260/0652-90 • Sociedade Anônima Aberta<br>
+                Capital Social: R$ 7,09 bilhões | Inscrição Estadual SP: 133.091.229.115</p>
+                <p class="small"><i class="bi bi-check-circle-fill text-success"></i> Situação: ATIVA desde 2008</p>
+                <div>
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5><i class="bi bi-link"></i> Links Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="footer-link">Início</a></li>
+                    <li><a href="#produtos" class="footer-link">Eletrodomésticos</a></li>
+                    <li><a href="#sobre" class="footer-link">Sobre a Empresa</a></li>
+                    <li><a href="#contato" class="footer-link">Contato e SAC</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5><i class="bi bi-pin-map-fill"></i> Matriz</h5>
+                <p class="small">Avenida Das Nacoes Unidas, 12995<br> Andar 2 a 5, Bloco I<br> Brooklin Paulista - SP, CEP 04578-911</p>
+                <p class="small"><i class="bi bi-envelope"></i> setorfiscal.csc@viavarejo.com.br<br><i class="bi bi-telephone"></i> (11) 4225-6431 / (11) 1111-1111</p>
+            </div>
+        </div>
+        <hr class="bg-white opacity-25">
+        <div class="text-center pt-2 small">
+            © 2025 Grupo Casas Bahia S.A. - Todos os direitos reservados. | Desenvolvido com <i class="bi bi-suit-heart-fill text-danger"></i> e responsabilidade. Dados conforme Receita Federal.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
